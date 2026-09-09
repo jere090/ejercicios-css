@@ -50,6 +50,18 @@ main {
    Si la imagen tarda en cargar, ¿para qué sirve el
    background-color de respaldo?
    ============================================================ */
+   .hero
+   {
+    height: 320px;
+    background-color: #23423d;
+    background-image: url("https://tse1.mm.bing.net/th/id/OIP.wvQfh8pHqXfkUGMNg-oSowHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center; 
+    background-attachment: fixed;
+   }
 
 /* ============================================================
    TODO 2 — Texto del hero
@@ -70,10 +82,18 @@ main {
    Un gradiente es una "imagen" que genera CSS: por eso va en
    background-image (o en el shorthand background).
    ============================================================ */
+   .frase
+   {
+      background: linear-gradient(90deg, #0d3b66, #1d7abc);
+      color: #ffffff;
+      padding: 24px;
+      text-align: center;
+   }
 
 /* ============================================================
    TODO 4 — Experimento con attachment
    Sumale a .hero:
    - background-attachment: fixed
    Scrolleá la página: ¿qué le pasa a la imagen del hero?
+   se queda estatica y no se mueve de ahi aunque lo scrollees
    ============================================================ */
