@@ -45,15 +45,17 @@ body {
 .foto {
   height: 100px;
   border-radius: 6px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Cada cuadro tiene su propio color de fondo. */
-.cuadro:nth-child(1) .foto { background: linear-gradient(135deg, #f4a261, #e76f51); }
-.cuadro:nth-child(2) .foto { background: linear-gradient(135deg, #60a5fa, #2563eb); }
-.cuadro:nth-child(3) .foto { background: linear-gradient(135deg, #fde047, #f59e0b); }
-.cuadro:nth-child(4) .foto { background: linear-gradient(135deg, #a78bfa, #7c3aed); }
-.cuadro:nth-child(5) .foto { background: linear-gradient(135deg, #34d399, #059669); }
-.cuadro:nth-child(6) .foto { background: linear-gradient(135deg, #f472b6, #db2777); }
+.cuadro:nth-child(1) .foto { background-image: url(https://wallpapercave.com/wp/wp9554544.jpg)}
+.cuadro:nth-child(2) .foto { background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/the-day-after-the-storm-kathleen-staab.jpg) }
+.cuadro:nth-child(3) .foto { background-image: url(https://noti-america.com/site/venezuela/wp-content/uploads/sites/2/2023/03/girasoles-foto-getty-images-768x509.jpeg) }
+.cuadro:nth-child(4) .foto { background-image: url(https://th.bing.com/th/id/OIP.fgqBqC6Qd39FgIR-GYdEzAHaEk?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3) }
+.cuadro:nth-child(5) .foto { background-image: url(https://cdn.pixabay.com/photo/2020/03/21/20/20/city-4955131_1280.jpg) }
+.cuadro:nth-child(6) .foto { background-image: url(https://tse4.mm.bing.net/th/id/OIP.UuYQStH9TbmypxmxYBxYzwHaEW?r=0&rs=1&pid=ImgDetMain&o=7&rm=3) }
 
 figcaption {
   text-align: center;
@@ -66,6 +68,10 @@ figcaption {
    A .foto dale:
    - filter: grayscale(100%)
    ============================================================ */
+   .foto
+   {
+    filter: grayscale(100%);
+   }
 
 /* ============================================================
    TODO 2 — Color al pasar el mouse
@@ -73,6 +79,15 @@ figcaption {
    - filter: none
    Pasá el mouse por los cuadros: cada foto recupera el color.
    ============================================================ */
+   .cuadro
+   {
+    overflow: hidden;
+   }
+
+   .cuadro:hover .foto
+   {
+    filter: none;
+   }
 
 /* ============================================================
    TODO 3 — El cuadro crece
@@ -80,12 +95,20 @@ figcaption {
    - transform: scale(1.05)
    (La transition del base hace el resto: suavidad.)
    ============================================================ */
+   .cuadro:hover
+   {
+    transform: scale(1.05);
+   }
 
 /* ============================================================
    TODO 4 — El sello inclinado
    A .sello dale:
    - transform: rotate(-4deg)
    ============================================================ */
+   .sello
+   {
+    transform: rotate(-4deg);
+   }
 
 /* ============================================================
    TODO 5 — La obra destacada
@@ -93,9 +116,23 @@ figcaption {
    - filter: saturate(200%) brightness(1.1)
    Fijate: se pueden combinar varios filtros en una sola línea.
    ============================================================ */
+   .destacada .foto
+   {
+    filter: saturate(200%) brightness(1.1)
+   }
 
 /* ============================================================
     PARA EXPERIMENTAR
    Probá sobre .foto: blur(3px), sepia(80%), hue-rotate(90deg)
    y el transform translate(10px, -5px). ¿Qué hace cada uno?
+   el blur bluerrea la imagen, el sepia, el hue-rotate es el circulo de colores 
+   y lo rotas con los angulos 
    ============================================================ */
+   /*.foto
+   {
+     filter: blur(3px) sepia(80%) hue-rotate(90deg);
+     transform: translate(10px, -5px);
+     
+
+   }
+  */
