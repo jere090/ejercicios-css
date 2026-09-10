@@ -112,8 +112,8 @@ body {
 /* ============================================================
    TODO 2 — Tableta (hasta 900px)
    Con una media query, cuando la pantalla mida MÁXIMO 900px:
-   @media (max-width: 900px) { ... }
-   - .tarjetas  grid-template-columns: repeat(2, 1fr)
+   @media (max-width: 900px o width <= 900px) { ... }
+   - .tarjetas  grid-template-columns: repeat(2, 1fr) -->aca es 2 por cada fila 
    - .hero h1  font-size: 28px
    Abrí el navegador y achicá la ventana para verlo funcionar.
    ============================================================ */
@@ -126,7 +126,7 @@ body {
 /* ============================================================
    TODO 3 — Celular (hasta 600px)
    Otra media query, ahora con max-width: 600px:
-   - .tarjetas  grid-template-columns: 1fr
+   - .tarjetas  grid-template-columns: 1fr --> esto es para que en cada fila de la columna haya uno solo
    - .barra  flex-direction: column y gap: 8px
    - .nota  text-align: center
    ============================================================ */
