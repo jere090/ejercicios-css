@@ -82,6 +82,32 @@ body {
    - gap: 16px
    - padding: 24px
    ============================================================ */
+   .barra
+   {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #3e2b23;
+    color: #fff;
+   }
+   .links
+   {
+    display: flex;
+    gap: 16px;
+   }
+   .links a
+   {
+    color: #fff;
+    text-decoration: none;
+   }
+   .tarjetas
+   {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 24px;
+   }
 
 /* ============================================================
    TODO 2 — Tableta (hasta 900px)
@@ -91,6 +117,11 @@ body {
    - .hero h1  font-size: 28px
    Abrí el navegador y achicá la ventana para verlo funcionar.
    ============================================================ */
+   @media (max-width: 900px)
+   {
+    .tarjetas {grid-template-columns: repeat(2, 1fr);}
+    .hero h1 { font-size: 28px;}
+   }
 
 /* ============================================================
    TODO 3 — Celular (hasta 600px)
@@ -99,6 +130,16 @@ body {
    - .barra  flex-direction: column y gap: 8px
    - .nota  text-align: center
    ============================================================ */
+   @media(max-width: 600px)
+   {
+    .tarjetas {grid-template-columns: 1fr;}
+    .barra
+    {
+      flex-direction: column;
+      gap: 8px ;
+    }
+    .nota {text-align: center;}
+   }
 
 /* ============================================================
     PARA PENSAR
