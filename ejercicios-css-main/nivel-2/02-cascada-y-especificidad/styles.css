@@ -63,8 +63,8 @@ body {
   margin: 0 auto;
 }
 
-.destacado {
-  border-left: 6px solid #b25b1f;
+.item.destacado {
+  border-left: 6px solid #b25b1f ;
 }
 
 .item {
@@ -76,16 +76,15 @@ body {
 }
 
 .nombre {
-  font-size: 1.15rem;
+  font-size: 1.15rem; 
 }
 
 .precio {
-  color: #2a9d8f !important;
+  color: #2a9d8f ;
   font-weight: bold;
 }
 
-.etiqueta,
-2026-ofertas {
+.etiqueta{
   display: inline-block;
   background-color: #e63946;
   color: #ffffff;
@@ -95,13 +94,13 @@ body {
   margin-bottom: 8px;
 }
 
-.lista :not(.oferta) {
+.lista :not(.oferta) .precio {
   color: #2a9d8f;
 }
 
 .oferta .precio {
-  color: #e63946;
   text-decoration: line-through;
+  color: #991a1a !important;
 }
 
 .aviso {
